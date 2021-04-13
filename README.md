@@ -2,7 +2,7 @@
 Implementation of a classification neural network in TensorFlow/Keras by fine-tuning VGG16 model and its deployment to Flask web service
 
 # About VGG16 neural network model
-VGG16 [1] is a deep convolutional neural network (CNN) which was trained on a subset of ImageNet dataset and achieves a 92.7% test accuracy. The input images to VGG16 network are of size 224x224 RGB. Below shows the architecure of VGG16 model.
+[VGG16](https://arxiv.org/abs/1409.1556) is a deep convolutional neural network (CNN) which was trained on a subset of [ImageNet](http://www.image-net.org/) dataset and achieves a 92.7% test accuracy; [VGG16 for Classification and Detection](https://neurohive.io/en/popular-networks/vgg16/). The input images to VGG16 network are of size 224x224 RGB. Below shows the architecure of VGG16 model.
 
 [architecture of VGG16 model]
 
@@ -16,4 +16,5 @@ Flask is a Python framework that makes building web applications easy. Here, Fla
 
 # References
 [1] K. Simonyan & A. Zisserman, “VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION,” ICLR 2015, Apr. 2015.
+
 [2] https://neurohive.io/en/popular-networks/vgg16/
