@@ -18,7 +18,7 @@ Flask is a Python framework that makes building web applications easy. Here, Fla
 
 The Notebook file "DogsvsCats_vgg16_finetuned.ipynb" implements fine-tuning on VGG16 model. We want to use VGG16 to classify images of cats and dogs. Therefore, there are only two classes. Since the model is already trained on ImageNet to classify cats and dogs, all the layers in the model are freezed and only the last layer is retrained to classify only two classes. The resulting fine-tuned VGG16 model is saved as a h5 file. Later this fine-tuned model will be used to classify images of cats and dogs through a Flask web application. 
 
-The Notebook file "classification-vgg16-finetuned-backend-flask-singleImage.ipynb" contains the codes for implementing the Flask web service which receives a single image from the user through a HTTP request, calls the fine-tuned VGG16 model, does a prediction on the image and return the result back to the user.
+The Notebook file "classification-vgg16-finetuned-backend-flask-singleImage.ipynb" contains the codes for implementing the Flask web service which receives a single image from the user through a HTTP request, calls the fine-tuned VGG16 model, does a prediction on the image and returns the result back to the user.
 
 The Notebook file "classification-vgg16-finetuned-frontend-flask-singleImage.ipynb" contains the JavaScript and HTML codes for a web application where the user can upload an image of a cat or a dog and send it to the Flask web service.
 
