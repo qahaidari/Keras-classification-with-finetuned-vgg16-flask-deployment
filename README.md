@@ -13,3 +13,15 @@ ImageNet is a dataset with over 14 million images from roughly 22000 different c
 Flask is a Python framework that makes building web applications easy. Here, Flask is used to implement a frontend web application where the user can enter data (such as images for classification) and send them to a backend server. The backend server is also implemented by Flask which receives the user input data through HTTP methods, processes and returns a response to the frontend application. In this project, the response would be a prediction on if the input image is a cat or a dog. Since in this project, the web application and web service are implemented on Google Colab, flask-ngrok should be installed according to [this tutorial](https://medium.com/@kshitijvijay271199/flask-on-google-colab-f6525986797b). Below command is used to do so.
 
 !pip install flask-ngrok
+
+# About the project
+
+The Notebook file "DogsvsCats_vgg16_finetuned.ipynb" implements fine-tuning on VGG16 model. We want to use VGG16 to classify images of cats and dogs. Therefore, there are only two classes. Since the model is already trained on ImageNet to classify cats and dogs, all the layers in the model are freezed and only the last layer is retrained to classify only two classes. The resulting fine-tuned VGG16 model is saved as a h5 file. Later this fine-tuned model will be used to classify images of cats and dogs through a Flask web application. 
+
+The Notebook file "classification-vgg16-finetuned-backend-flask-singleImage.ipynb" contains the codes for implementing the Flask web service which receives a single image from the user through a HTTP request, calls the fine-tuned VGG16 model, does a prediction on the image and return the result back to the user.
+
+The Notebook file "classification-vgg16-finetuned-frontend-flask-singleImage.ipynb" contains the JavaScript and HTML codes for a web application where the user can upload an image of a cat or a dog and send it to the Flask web service.
+
+# Future work
+
+As a further improvement to this project, the user can send a batch of images through the web application and on the web service side, the fine-tuned VGG16 model receives a batch of images and implements predictions on the batch.
